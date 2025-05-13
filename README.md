@@ -1,4 +1,4 @@
-## como instalar y ejecutar AniemMas correctamente
+## como instalar y ejecutar peliculasanime
 
 despues de montar el projecto, migra todas las migraciones
 una ves migradas en caso de que no se migre alguna o genere error 500 o algo relacionado a la base de datos
@@ -16,16 +16,7 @@ y levantar servidor
 recuerda que utilizamos open admin como sistema de moderacion y roles
 
 
-<p align="center"><a href="https://mail.google.com/mail/u/0/#search/animemas337%40gmail.com" target="_blank"><img src="https://image.pngaaa.com/210/845210-middle.png" width="400" alt="animeMas"></a></p>
 
-
-
-## que es AnimeMas?
-
-Animemas es una pagina we en donde podras disfrutar del mundo del manga,comics y novelas graficas
-
-
-## se utilizaron tecnologias como livewire y la libreria de php, node.js
 
 
 
