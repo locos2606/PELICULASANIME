@@ -1,0 +1,202 @@
+/* Importar Roboto de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body y tipografía */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212; /* Fondo oscuro */
+  color: #ffffff;            /* Texto blanco */
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #1f1f1f; /* Gris muy oscuro */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  padding: 1rem 2rem;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.logo {
+  height: 3rem;
+  width: auto;
+}
+h1 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Layout general */
+.container {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #1f1f1f;      /* Fondo oscuro */
+  border-right: 1px solid #333333;
+  padding: 1.5rem 1rem;
+  height: calc(100vh - 72px);
+  position: fixed;
+  overflow-y: auto;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar li + li {
+  margin-top: 1rem;
+}
+.sidebar a {
+  display: block;
+  color: #dddddd;                 /* Texto claro */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #333333;      /* Hover más claro */
+}
+
+/* Main / Dashboard */
+.dashboard {
+  margin-left: 240px; /* deja espacio para la sidebar */
+  flex: 1;
+  padding: 2rem;
+}
+.dashboard-item {
+  background-color: #1e1e1e;      /* Contenedores oscuros */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: none;                  /* oculto por defecto */
+}
+.dashboard-item.active {
+  display: block;
+}
+
+/* Títulos de sección */
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #90caf9;                  /* Acento celeste */
+  border-bottom: 2px solid #90caf9;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Chart containers */
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+/* Botones */
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #90caf9;      /* Celeste */
+  color: #121212;                  /* Texto oscuro para contraste */
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+button:hover {
+  background-color: #64b5f6;
+}
+.exit-button a {
+  display: block;
+  padding: 0.4rem 0.8rem;
+  background-color: #e53935;      /* Rojo de alerta */
+  color: #ffffff;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+.exit-button a:hover {
+  background-color: #d32f2f;
+}
+
+/* Perfil usuario */
+.perfil-container {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+.box-lista-favorita,
+.box-x,
+.box-out-sign {
+  background-color: #2a2a2a;
+  border: 1px solid #333333;
+  padding: 0.75rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  color: #ffffff;
+}
+
+/* Caja contenedora genérica */
+.caja-contenedora {
+  background-color: #2a2a2a;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  color: #ffffff;
+  align-items: flex-start;
+}
+.caja-contenedora div {
+  border: 1px solid #444444;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #1e1e1e;
+  text-align: center;
+  width: 100%;
+}
+.caja-contenedora div:last-child {
+  margin-bottom: 0;
+}
+.caja-contenedora img {
+  max-width: 150px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    margin-bottom: 1rem;
+  }
+  .dashboard {
+    margin-left: 0;
+  }
+}

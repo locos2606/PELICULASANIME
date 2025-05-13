@@ -1,0 +1,106 @@
+/* Importar Roboto desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body y tipografía */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;    /* Fondo oscuro */
+  color: #e0e0e0;               /* Texto claro */
+  min-height: 100vh;
+}
+
+/* Contenedor de cabecera */
+.header-container {
+  background-color: rgba(18, 18, 18, 0.9);
+  padding: 1rem 2rem;
+}
+
+/* Sección principal */
+.section-list {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);    /* Fondo oscuro semitransparente */
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  min-height: calc(100vh - 4rem);
+}
+
+/* Enlaces */
+a {
+  color: #bb86fc;            /* Morado claro */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #03dac6;            /* Verde agua */
+}
+
+/* Efecto hover en elementos de manga */
+.manga-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
+/* Imágenes más grandes y centradas */
+img {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 300px;          /* Aumenta este valor si quieres aún más grande */
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Caja de cada manga */
+.manga-box {
+  background-color: rgba(30, 30, 30, 0.8); /* Caja oscura semitransparente */
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Botones de eliminar y volver */
+.delete-button,
+.back-button {
+  margin-left: 10px;
+  border: none;
+  background-image: linear-gradient(
+    150deg,
+    rgba(40, 160, 86, 0.8),
+    rgb(13, 114, 55),
+    #00ddff
+  );
+  border-radius: 8px;
+  color: #fff;
+  font-size: 18px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.delete-button:hover,
+.back-button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive: cajas apiladas en móvil */
+@media (max-width: 768px) {
+  .manga-box {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

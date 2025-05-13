@@ -1,0 +1,251 @@
+
+@import url('');
+/* Estilos generales */
+:root{
+    --color-fondo: linear-gradient(to right,rgba(48, 6, 65, 0.708),rgb(5, 3, 48));
+    --color-background:rgb(98, 2, 188);
+    --text-color:rgb(0, 0, 0);
+    --main-text-color:rgb(0, 0, 0);
+    --exotic-color: linear-gradient(
+        150deg,
+        rgba(212, 1, 198, 0.883),
+        #09F,
+        #00DDFF
+    );
+}
+
+a{
+    
+    text-decoration: none;
+    font-weight: bold;
+}
+#saveMangaButton {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre la imagen y el texto */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#saveMangaButton:hover {
+    background-color: #0056b3;
+}
+
+.button-icon {
+    width: 20px; /* Ajusta el tamaño de la imagen */
+    height: 20px;
+}
+
+.btn{
+    margin: 0 auto;
+}
+.comments-section {
+    margin-top: 20px;
+}
+.comment-user {
+    font-weight: bold; /* Negrita para el nombre del usuario */
+    margin-bottom: 5px; /* Espacio debajo del nombre */
+}
+
+.comment-text {
+    color: #333; /* Color del texto del comentario */
+}
+
+textarea {
+    width: 100%; /* Ancho completo del área de texto */
+    height: 80px; /* Altura del área de texto */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    margin-top: 10px; /* Margen superior */
+}
+
+
+.comment-box {
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px;
+    margin-bottom: 10px; /* Espaciado entre comentarios */
+    
+    background-color: rgba(255, 255, 255, 0.562);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#banner-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Asegura que la imagen cubra completamente el banner */
+}
+#manga-cover {
+    max-width: 400px; /* Limita el ancho a 300px */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que sea un bloque, útil para centrar si lo deseas */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.header_botons {
+    padding: 10px;
+    background-color: #00000066;
+    display: flex;         /* Usa Flexbox para alinear los elementos en fila */
+    gap: 10px;            /* Espaciado entre los botones */
+    justify-content: center; /* Opcional: centra los botones en el contenedor */
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+header span {
+    display: flex;         /* Asegúrate de que el span se comporte como un contenedor flex */
+}
+#box-lista-favorita {
+    border: 1px solid red; /* Agrega un borde para visualizar */
+    padding: 10px; /* Espaciado interno para mejor visibilidad */
+    background-color: white; /* Asegúrate de que el fondo no lo oculte */
+}
+
+button {
+    border: 0;
+    background-image: linear-gradient(
+        150deg,
+        rgba(212, 1, 198, 0.883),
+        #09F,
+        #00DDFF
+    );
+    border-radius: 8px;
+    color: #fff;
+    display: flex;         /* Permite flex en el contenido del botón */
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button h2 {
+    margin: 0;            /* Elimina el margen por defecto del h2 */
+}
+
+button span {
+    background-color: #111;
+    padding: 16px 24px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+button:hover span {
+    background: none;
+}
+
+button:active {
+    transform: scale(0.9); /* Corrige el valor a 0.9 en lugar de 0,9 */
+}
+
+body, html {
+    font-family: "Roboto", sans-serif;
+    /* background-image: url(Assets/wp2915668.jpg)no-repeat center center/cover;**/ 
+    
+    
+    background: url() no-repeat center center/cover;
+
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Estilo de la sección principal */
+.hero {
+    
+    min-height: 100vh; /* Asegura que esta sección ocupe al menos la altura de la ventana */
+    padding: 60px 0; /* Espaciado interno */
+    display: flex;
+    
+}
+
+/* Estilo de las secciones */
+.section {
+    
+    padding: 60px 0; /* Espaciado interno */
+    box-sizing: border-box;
+}
+.home{
+    display: grid;                 /* Habilita Grid */
+    place-items: center;          /* Centra ambos ejes (horizontal y vertical) */
+    text-align: center;           /* Alinea el texto al centro */
+    padding: 20px;                /* Espaciado interno opcional */
+    height: 100vh;                /* Ajusta la altura del contenedor (opcional) */
+}
+/* Estilo de contenedor */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo de la cuadrícula */
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+/* Estilo de las tarjetas */
+.card {
+    color: #000;
+    background: #c77cf9;
+    background: var(--exotic-color);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding-top: 10px;
+}
+
+h1, h2, h3 {
+    color: var(--main-text-color);
+    margin: 0 0 10px 0;
+}
+
+p {
+    color: var(--main-text-color);
+    margin: 0 0 15px 0;
+}
+
+/* Estilo del botón */
+.btn {
+    background-color: var(--button-color);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.Naruto{
+    align-items: center;
+    padding: auto;
+    flex: auto;
+    width: 2px;
+    height: 2px;
+}
+.footer-container {
+    display: grid;
+    place-items: center;
+    height: 100vh;       
+    margin: 0;           
+}
+.footer{
+    height: 500px;
+    
+    width: 15000vh;
+    justify-content: flex-start;
+    padding: 10px;
+    color: var(--main-text-color);
+    background-color: #000000; 
+}

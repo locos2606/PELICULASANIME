@@ -1,0 +1,123 @@
+:root {
+    --color-fondo: linear-gradient(to right, rgba(20, 20, 20, 0.9), rgba(5, 5, 5, 0.9)); /* Fondo oscuro */
+    --color-texto-poster: rgb(255, 255, 255); /* Blanco para el texto */
+    --color-texto-formulario: rgb(200, 200, 200); /* Gris claro para los campos */
+    --color-btn: linear-gradient(to right, rgba(2, 53, 95, 0.842), rgba(0, 0, 0)); /* Fondo de los botones */
+    --color-btn-hover: rgba(35, 33, 33, 0.8); /* Fondo oscuro para hover */
+    --color-fondo-input: rgba(60, 60, 60, 0.8); /* Fondo más oscuro para los campos de entrada */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212; /* Fondo oscuro para todo el body */
+    color: var(--color-texto-poster);
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1, h2, p {
+    color: var(--color-texto-poster);
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 800px;
+    height: 80%;
+    max-height: 600px;
+    margin: auto;
+    gap: 20px;
+    color: var(--color-texto-poster);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para el contenedor */
+    backdrop-filter: blur(10px); /* Desenfoque del fondo */
+    -webkit-backdrop-filter: blur(10px); /* Para compatibilidad con Safari */
+}
+
+.container-poster {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro para la imagen */
+}
+
+.container-poster img {
+    width: 80%;
+    height: auto;
+}
+
+.container-formulario {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo aún más oscuro para el formulario */
+    border-radius: 10px;
+}
+
+.container-formulario h2 {
+    margin-bottom: 30px;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.container-formulario input {
+    display: block;
+    border-radius: 4px;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid var(--color-texto-formulario);
+    background-color: var(--color-fondo-input);
+    color: var(--color-texto-poster);
+    font-size: 16px;
+}
+
+.container-formulario input::placeholder {
+    color: #bbb;
+}
+
+.container-formulario .btn {
+    background-color: var(--color-btn-hover);
+    color: var(--color-texto-poster);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 16px;
+}
+
+.container-formulario .btn:hover {
+    background-color: var(--color-btn);
+    color: var(--color-texto-poster);
+}
+
+@media(max-width: 767px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+    .container-poster, .container-formulario {
+        width: 100%;
+        padding: 15px;
+    }
+    .container-poster img {
+        width: 70%;
+    }
+}

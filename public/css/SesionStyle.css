@@ -1,0 +1,216 @@
+:root {
+    --color-fondo: linear-gradient(to right, rgba(0, 140, 158), rgb(6, 5, 20));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url() no-repeat center center/cover;
+    font-family: "Roboto", sans-serif;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+}
+
+.dasboar-color {
+    color: white;
+}
+
+a {
+    color: rgb(89, 4, 159);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo-back img {
+    max-width: 50px; /* Ajusta el ancho máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que no haya espacio adicional alrededor */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+    box-shadow: 0 0 10px rgba(155, 7, 7, 0.5); /* Opcional: sombra para un efecto visual */
+}
+
+.logo1 img {
+    max-width: 50px; /* Ajusta el ancho máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que no haya espacio adicional alrededor */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
+/* Barra de navegación */
+.contenedor-nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: rgb(6, 0, 0);
+    z-index: 1000;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(179, 29, 29, 0.756);
+}
+
+.user-name {
+    color: white;
+}
+
+.contenedor-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.Bienvenido {
+    padding: 20px;
+    font-size: 1.5rem;
+    color: aqua;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px;
+    margin-top: 80px;
+    text-align: center;
+    background-color: rgb(12, 12, 12);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.693);
+}
+
+h1 {
+    color: aqua;;/*titulo animedj*/
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Formulario de búsqueda */
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: aqua;;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Cuadrícula de mangas */
+.manga-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.manga-item {
+    background-color: rgb(35, 34, 34);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.manga-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+.manga-item h2 a {
+    color: #060606;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.manga-cover:hover {
+    transform: scale(1.05);
+}
+
+.manga-item h2 a:hover {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Ajustes en la barra de navegación para móviles */
+    .contenedor-nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .contenedor-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .Bienvenido {
+        font-size: 1.2rem;
+    }
+
+    /* Ajuste de la cuadrícula de mangas en tablets */
+    .manga-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes en la cuadrícula de mangas para smartphones */
+    .manga-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* Ajustes en el formulario de búsqueda para que ocupe todo el ancho */
+    input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .Bienvenido {
+        font-size: 1rem;
+    }
+}
