@@ -1,5 +1,14 @@
 ## como instalar y ejecutar peliculasanime
+Este proyecto es una página web dedicada a ver películas de anime, donde los usuarios pueden:
 
+Registrarse e iniciar sesión
+
+Comentar en cada película
+
+Agregar películas a una lista de favoritos
+
+El sistema incluye una funcionalidad social y personalizada, permitiendo a cada usuario interactuar con el contenido según sus preferencias. 
+Además
 despues de montar el projecto, migra todas las migraciones
 una ves migradas en caso de que no se migre alguna o genere error 500 o algo relacionado a la base de datos
 migrar para tabla en especifico:  php artisan migrate --path=/database/migrations/2024exampletable.php
